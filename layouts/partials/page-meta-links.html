@@ -12,7 +12,7 @@
 {{ else if $gh_repo -}}
   {{ $gh_repo_path := printf "%s%s" $gh_branch $pathFormatted -}}
   {{ if $gh_subdir -}}
-    {{ $gh_repo_path = printf "%s/%s%s" $gh_branch $gh_subdir ( relLangURL $pathFormatted ) -}}
+    {{ $gh_repo_path = printf "%s/%s%s" $gh_branch $gh_subdir $pathFormatted -}}
   {{ end -}}
 
   {{/* Adjust $gh_repo_path based on path_base_for_github_subdir */ -}}
